@@ -3,7 +3,8 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: pygments
+# highlighter: pygments (default but currently unsupported on GitHub Pages
+highlighter: 'rouge'
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
@@ -92,7 +93,7 @@ JB :
     facebook :
       appid : 534365867725896
       num_posts: 5
-      width: 580
+      width: 100%
       colorscheme: light
     duoshuo :
       short_name : jekyllbootstrap
