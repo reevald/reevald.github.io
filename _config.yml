@@ -92,7 +92,7 @@ JB :
       account : 123abc
     facebook :
       appid : 534365867725896
-      num_posts: 5
+      num_posts: 6
       width: 100%
       colorscheme: light
     duoshuo :
