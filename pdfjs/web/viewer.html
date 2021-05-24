@@ -30,20 +30,74 @@ See https://github.com/adobe-type-tools/cmap-resources
 
 
     <link rel="stylesheet" href="viewer.css">
+    <style type="text/css">
+      .btn{
+            display: inline-block;
+            float: right;
+            margin-right: 15px;
+            margin-top: 3px;
+    padding: 3px 8px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+      }
+      .btn-default{
+            text-shadow: 0 1px 0 #fff;
+    background-image: -webkit-linear-gradient(top,#fff 0,#e0e0e0 100%);
+    background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
+    background-repeat: repeat-x;
+    border-color: #dbdbdb;
+    border-color: #ccc;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe0e0e0',GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),0 1px 1px rgba(0,0,0,0.075);
+    color: #555;
+    background-color: #fff;
+      }
+      .box-nav-pdf{
+        position: relative;
+        left: 0px;
+        right: 0px;
+        height: 35px;
+        z-index: 9999;
+        background-color: rgba(249, 249, 250, 1);
+        border-bottom: 1px solid rgba(204, 204, 204, 1);
+      }
+      .title-main{
+          color: #777;
+          float: left;
+          padding-left: 15px;
+          padding-top: 8px;
+          font-size: 18px;
+          line-height: 20px;
+          text-shadow: 0 1px 0 rgba(255,255,255,0.25);
+          text-decoration: none;
+      }
+    </style>
 
 
-<!-- This snippet is used in production (included from viewer.html) -->
-<link rel="resource" type="application/l10n" href="locale/locale.properties">
-<script src="../build/pdf.js"></script>
-
-
-  <script src="viewer.js"></script>
+    <!-- This snippet is used in production (included from viewer.html) -->
+    <link rel="resource" type="application/l10n" href="locale/locale.properties">
+    <script src="../build/pdf.js"></script>
+    <script src="viewer.js"></script>
 
   </head>
 
   <body tabindex="1">
     <div id="outerContainer">
-
       <div id="sidebarContainer">
         <div id="toolbarSidebar">
           <div id="toolbarSidebarLeft">
@@ -118,7 +172,7 @@ See https://github.com/adobe-type-tools/cmap-resources
           </div>
         </div>  <!-- findbar -->
 
-        <div id="secondaryToolbar" class="secondaryToolbar hidden doorHangerRight">
+        <div id="secondaryToolbar" class="secondaryToolbar hidden doorHangerRight" style="top:75px;">
           <div id="secondaryToolbarButtonContainer">
             <button id="secondaryPresentationMode" class="secondaryToolbarButton presentationMode visibleLargeView" title="Switch to Presentation Mode" tabindex="51" data-l10n-id="presentation_mode">
               <span data-l10n-id="presentation_mode_label">Presentation Mode</span>
@@ -199,6 +253,12 @@ See https://github.com/adobe-type-tools/cmap-resources
           </div>
         </div>  <!-- secondaryToolbar -->
 
+        <!-- START -->
+        <div class="box-nav-pdf">
+          <a class="title-main" href="https://reevald.github.io">Reevald</a>
+          <button class="btn btn-default" data-l10n-id="download" id="download">Download</button>
+        </div>
+        <!-- FINISH -->
         <div class="toolbar">
           <div id="toolbarContainer">
             <div id="toolbarViewer">
@@ -298,7 +358,7 @@ See https://github.com/adobe-type-tools/cmap-resources
         </menu>
 
         <div id="viewerContainer" tabindex="0">
-          <div id="viewer" class="pdfViewer"></div>
+          <div id="viewer" class="pdfViewer" style="margin-top: 60px;"></div>
         </div>
 
         <div id="errorWrapper" hidden='true'>
