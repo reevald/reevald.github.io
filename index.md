@@ -1,14 +1,20 @@
 ---
 layout: page
 title: Welcome!
-tagline: 
+tagline: ようこそ
 ---
 {% include JB/setup %}
 
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
-
-
+<div class="panel panel-default">
+  <div class="panel-heading">
+    List Posts
+  </div>
+    <div class="list-group">
+      {% for post in site.posts %}
+        <a class="list-group-item" href="{{ BASE_PATH }}{{ post.url }}">
+          <span class="badge">{{ post.date | date_to_string }}</span>
+          {{ post.title }}
+        </a>
+      {% endfor %}
+    </div>
+</div>
