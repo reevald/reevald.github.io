@@ -1,0 +1,16 @@
+I"…
+<p>Test math :<br />
+Diket : \(f(x)=ax^2+bx+c\)<br />
+Jika : \(f(x)=0\)<br />
+Maka akar-akarnya adalah :</p>
+
+\[x_{1,2} = \frac{-b\pm\sqrt{b^2-4ac}}{2a}\]
+
+<p>Try read pdf:</p>
+
+<p><a class="btn btn-default" href="/pdfjs/web/viewer.html?file=assets/tugas-5.pdf" target="_blank">Load PDF</a></p>
+
+<p>Test load img:</p>
+
+<p><img src="/assets/images/kuda1.jpg" class="img-responsive" /></p>
+:ET
